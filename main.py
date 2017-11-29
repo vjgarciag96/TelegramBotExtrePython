@@ -1,5 +1,6 @@
 import telegram
 from telegram.ext import Updater, CommandHandler
+from telegram.ext import MessageHandler, Filters
 
 import logging
 
@@ -17,4 +18,11 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 def start(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text="Hola mundo, soy un bot, por favor, háblame!!")
 
-dispatcher.add_handler(CommandHandler('start', start))
+def echo(bot, update):
+    bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
+
+start_command_handler = CommandHandler('start', start)
+echo_handler = MessageHandler(Filters.text, echo)
+
+dispatcher.add_handler(start_command_handler)
+dispatcher.add_handler(echo_handler)

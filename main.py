@@ -27,14 +27,20 @@ def inline_caps(bot, update):
 def unknown(bot, update):
     bot.send_message(chat_id=update.message.chat_id, text='Lo siento, no entiendo ese comando :(')
 
-def callback_minute(bot, job):
-    bot.send_message(chat_id='187395179', text='En un minuto vuelvo')
+def callback_minute(bot, chat_id):
+    bot.send_message(chat_id='-265182967', text='En un minuto vuelvo')
 
+def awesome_callback(bot, update):
+    update.message.reply_text('¿Hablas tu de ExtrePython? La mejor comunidad de Python de España Hulio')
+
+def chat_id(bot, update):
+    bot.send_message(chat_id=update.message.chat_id, text='El idenficador de este chat es ' + str(update.message.chat_id))
 
 import telegram
 from telegram.ext import Updater, CommandHandler
 from telegram.ext import MessageHandler, Filters
 from telegram.ext import InlineQueryHandler
+from AwesomeFilter import AwesomeFilter
 
 import logging
 import tokens
@@ -49,16 +55,22 @@ job_queue = updater.job_queue
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                      level=logging.INFO)
 
+#Filters.video, Filters.photo
+awesome_filter = AwesomeFilter()
+
 start_command_handler = CommandHandler('start', start)
 echo_handler = MessageHandler(Filters.text, echo)
 caps_handler = CommandHandler('caps', caps, pass_args=True)
 inline_caps_handler = InlineQueryHandler(inline_caps)
 unknown_handler = MessageHandler(Filters.command, unknown)
-
+awesome_handler = MessageHandler(awesome_filter, awesome_callback)
+chat_id_handler = CommandHandler('chatId', chat_id)
 job_minute = job_queue.run_repeating(callback_minute, interval=60, first=0)
 
 dispatcher.add_handler(start_command_handler)
+dispatcher.add_handler(awesome_handler)
 dispatcher.add_handler(echo_handler)
 dispatcher.add_handler(caps_handler)
 dispatcher.add_handler(inline_caps_handler)
+dispatcher.add_handler(chat_id_handler)
 dispatcher.add_handler(unknown_handler)

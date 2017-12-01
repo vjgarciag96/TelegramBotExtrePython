@@ -1,3 +1,4 @@
+EXTREPYTHON_BOT_TOKEN = '508653623:AAEP3dzF-N1N1VIoaQ2IDghHQDwPSVR6fVg'
 HOMER_IMAGES = ['https://vignette.wikia.nocookie.net/simpsons/images/7/78/King-Size_Homer_%28Promo_Picture%29_2.jpg/revision/latest/scale-to-width-down/178?cb=20120624185539',
                 'http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts',
                 'https://rhapsodyinbooks.files.wordpress.com/2014/01/homer.png',

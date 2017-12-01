@@ -1,5 +1,5 @@
 # TelegramBotExtrePython
-Ejemplo creado como demostracin para el taller de bots de Telegram organizado por la ExtrePython el día 31/12/2017
+Ejemplo creado como demostración para el taller de bots de Telegram organizado por la ExtrePython el día 31/12/2017
 
 ## Requisitos Previos
 
@@ -21,3 +21,6 @@ Ejemplo creado como demostracin para el taller de bots de Telegram organizado po
     - Instalar pip, que es un gestor de paquetes escritos en python https://pip.pypa.io/en/stable/installing/
     - Ejecutar en una terminal: $pip install python-telegram-bot --upgrade
  
+  Como alternativa, hay una máquina virtual con Ubuntu 17.10, todo el software instalado y el IDE Pycharm CE para poder seguir el taller sin problemas. La contraseña del usuario srpython es python. Se encuentra en el siguiente enlace. 
+     
+   https://drive.google.com/open?id=1wOGtn_Xwhf2mTJ8ReFOVPp4McV2prT2U

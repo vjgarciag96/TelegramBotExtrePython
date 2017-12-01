@@ -1,8 +1,8 @@
 # JetBrains Pycharm
 # User-specific stuff:
-#.idea/workspace.xml
-#.idea/misc.xml
-#.idea/modules.xml
-#.idea/vcs.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
 # Project stuff:
-#.idea/TelegramBotExtrePython.iml
+.idea/TelegramBotExtrePython.iml

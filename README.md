@@ -1,5 +1,5 @@
 # TelegramBotExtrePython
-Ejemplo creado como demostración para el taller de bots de Telegram organizado por la ExtrePython el día 31/12/2017
+Ejemplo creado como demostración para el taller de bots de Telegram organizado por la ExtrePython el día 31/11/2017
 
 ## Requisitos Previos
 
